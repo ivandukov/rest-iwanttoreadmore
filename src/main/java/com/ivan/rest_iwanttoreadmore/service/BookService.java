@@ -46,5 +46,14 @@ public class BookService {
         return bookRepository.save(newBook);
     }
 
+    /**
+     * Returns a book by its id
+     * @param id The id of the book
+     * @return The book with the given id
+     */
+    public Book getBookById(String id) {
+        return bookRepository.findById(id).orElse(null);
+    }
+
 
 }
